@@ -9,14 +9,10 @@
   </head>
   <body>
 			<%= yield %>
-			<p>url: <%= @url %></p>
-			<p>ip: <%= @ip %></p>
-			<p>Agent: <%= @agent %></p>
-
 			<%= content_tag :div,
 					nil,
 					id: "app-test",
-					data: { ip: @ip }.to_json do %>
+					data: { ip: @ip, agent: @agent}.to_json do %>
 			<% end %>
 		</body>
 </html>
