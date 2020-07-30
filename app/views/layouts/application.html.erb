@@ -6,9 +6,17 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'show' %>
   </head>
   <body>
-    <%= yield %>
-  </body>
+			<%= yield %>
+			<p>url: <%= @url %></p>
+			<p>ip: <%= @ip %></p>
+			<p>Agent: <%= @agent %></p>
+
+			<%= content_tag :div,
+					nil,
+					id: "app-test",
+					data: { ip: @ip }.to_json do %>
+			<% end %>
+		</body>
 </html>
