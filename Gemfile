@@ -13,6 +13,8 @@ group :assets do
 	gem 'uglifier', '>= 1.3.0'
 end
 
+gem 'rails_12factor', group: :production
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
